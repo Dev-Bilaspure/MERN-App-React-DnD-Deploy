@@ -10,8 +10,10 @@ const DragDrop = () => {
   const [board, setBoard] = useState([]);
   const [rhsInput, setRHSInput] = useState('');
   const [comparator, setComparator] = useState('');
+  const [isFetching, setIsFetching] = useState(false);
 
   const handleEvaluate = async() => {
+    setIsFetching(true);
     let expString = '';
     for(let i=0;i<board.length;i++)
       expString+=board[i].character;
@@ -25,16 +27,19 @@ const DragDrop = () => {
         expstring: expString
       }).then(res => {
         console.log(res.data);
+        setIsFetching(false);
         if(!res.data.isStringValid)
           alert('This is not a valid equation');
         else
         alert(res.data.result);
       }).catch(err => {
         alert('Some error occured, please check your network connection!');
+        setIsFetching(false);
         console.log(err);
       })
     } catch(error) {
       alert('Some error occured, please check your network connection!');
+      setIsFetching(false);
       console.log(error);
     }
   }
@@ -56,7 +61,8 @@ const DragDrop = () => {
 
   const takeRHSInput = () => {
     let rhsInp = prompt('What should be the RHS integer?');
-    setRHSInput(rhsInp);
+    if(rhsInp.length!==0)
+      setRHSInput(rhsInp);
 
   }
 
@@ -162,9 +168,9 @@ const DragDrop = () => {
       
       
       <div>
-        <Button variant='contained'  onClick={handleEvaluate} style={{background: '#6495ed', textTransform: 'none', borderRadius: 10, width: '100%', marginTop: 20, boxShadow: 'none'}}>
+        <Button variant='contained' disabled={isFetching} onClick={handleEvaluate} style={{background: '#6495ed', textTransform: 'none', borderRadius: 10, width: '100%', marginTop: 20, boxShadow: 'none'}}>
           <Typography>
-            Evaluate
+            {isFetching ? 'Fetching...' : 'Evaluate'}
           </Typography>
         </Button>
       </div>

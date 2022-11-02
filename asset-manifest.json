@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/MERN-App-React-DnD-Deploy/static/js/main.bc418a24.js",
+    "index.html": "/MERN-App-React-DnD-Deploy/index.html",
+    "main.bc418a24.js.map": "/MERN-App-React-DnD-Deploy/static/js/main.bc418a24.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bc418a24.js"
+  ]
+}

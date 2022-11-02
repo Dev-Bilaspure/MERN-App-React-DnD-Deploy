@@ -174,6 +174,14 @@ const DragDrop = () => {
           </Typography>
         </Button>
       </div>
+      <div style={{marginTop: 20}}>
+        <Typography> 
+          For Reference:
+        </Typography>
+        <Typography> 
+          A = 20 | B = 30 | C = 9 | D = 40 | E = 5 | F = 12
+        </Typography>
+      </div>
     </div>
   )
 }

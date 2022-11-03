@@ -29,7 +29,7 @@ const DragDrop = () => {
         console.log(res.data);
         setIsFetching(false);
         if(!res.data.isStringValid)
-          alert('This equation is not a valid equation');
+          alert('This is not a valid equation');
         else
         alert(res.data.result);
       }).catch(err => {

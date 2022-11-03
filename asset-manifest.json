@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/MERN-App-React-DnD-Deploy/static/js/main.f9bd237d.js",
+    "main.js": "/MERN-App-React-DnD-Deploy/static/js/main.d5c91543.js",
     "index.html": "/MERN-App-React-DnD-Deploy/index.html",
-    "main.f9bd237d.js.map": "/MERN-App-React-DnD-Deploy/static/js/main.f9bd237d.js.map"
+    "main.d5c91543.js.map": "/MERN-App-React-DnD-Deploy/static/js/main.d5c91543.js.map"
   },
   "entrypoints": [
-    "static/js/main.f9bd237d.js"
+    "static/js/main.d5c91543.js"
   ]
 }
